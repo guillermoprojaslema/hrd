@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{makeidx} % Paquete para el índice
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage[acronym,nonumberlist,nopostdot]{glossaries}
+\setmainfont{Noto Sans CJK KR}
+
+
+
+\title{HwaRangDo: El Camino de los Hombres Florecientes}
+\author{Tú Nombre}
+\date{\today}
+
+\makeindex % Inicializar el índice
+
+
+\begin{document}
+
+	\begin{titlepage}
+		\centering
+		\vspace*{\fill}
+		\includegraphics[width=0.7\textwidth]{images/sam_taeguk.png} % Reemplaza 'hwarangdo_logo' con el nombre de tu archivo de logotipo
+		\vspace*{\fill}
+
+		\vspace*{2cm}
+
+		{\Huge\bfseries HwaRangDo: El Camino de los Hombres Flores\par}
+		\vspace{2cm}
+		{\Large Tú Nombre\par}
+
+		\vspace*{\fill}
+		{\large \today\par}
+	\end{titlepage}
+
+	\tableofcontents
+	% Índice generado automáticamente|
+
+	\frontmatter % Cambia al estilo de numeración de páginas romanos para las partes iniciales
+
+	%	El archivo entre {} debe ser \invlude{/ruta/al/nombredelarchivo} y el archivo tiene que tener .tex
+
+
+	\include{prologo}
+	\include{historia}
+	%	\include{introduccion}
+	%	\include{faja_blanca}
+	%	\include{faja_celeste}
+	%	\include{faja_celeste_amarillo}
+	%	\include{faja_amarillo}
+	%	\include{faja_amarillo_verde}
+	%	\include{faja_verde}
+	%	\include{faja_verde_azul}
+	%	\include{faja_azul}
+
+
+\end{document}
