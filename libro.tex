@@ -7,28 +7,39 @@
 \usepackage{fontspec}
 \usepackage{tabularx}
 \usepackage[acronym,nonumberlist,nopostdot]{glossaries}
-\setmainfont{Noto Sans CJK KR}
+\usepackage{subfig}
+\usepackage{caption}
+\usepackage{url}
+\usepackage{apacite}
+\usepackage{lipsum}
+%\setmainfont{Noto Sans CJK KR}
+\usepackage{CJKutf8}
+\usepackage{kotex}
 
 
 
-\title{HwaRangDo: El Camino de los Hombres Florecientes}
-\author{Tú Nombre}
+\title{Hwarangdo\textregistered: El Camino de los Hombres Florecientes}
+\author{Guillermo Rojas}
 \date{\today}
 
 \makeindex % Inicializar el índice
 
+\makenoidxglossaries
+\input{glosario.tex}
 
 \begin{document}
 
 	\begin{titlepage}
+		% Añadir un término al glosario
+
 		\centering
 		\vspace*{\fill}
-		\includegraphics[width=0.7\textwidth]{images/sam_taeguk.png} % Reemplaza 'hwarangdo_logo' con el nombre de tu archivo de logotipo
+		\includegraphics[width=0.7\textwidth]{images/sam_taeguk.png} % Reemplaza 'Hwarangdo\textregistered_logo' con el nombre de tu archivo de logotipo
 		\vspace*{\fill}
 
 		\vspace*{2cm}
 
-		{\Huge\bfseries HwaRangDo: El Camino de los Hombres Flores\par}
+		{\Huge\bfseries Hwarangdo\textregistered: El Camino de los Hombres Flores\par}
 		\vspace{2cm}
 		{\Large Tú Nombre\par}
 
@@ -44,17 +55,44 @@
 	%	El archivo entre {} debe ser \invlude{/ruta/al/nombredelarchivo} y el archivo tiene que tener .tex
 
 
+	\include{agradecimientos}
 	\include{prologo}
-	\include{historia}
-	%	\include{introduccion}
-	%	\include{faja_blanca}
-	%	\include{faja_celeste}
-	%	\include{faja_celeste_amarillo}
-	%	\include{faja_amarillo}
-	%	\include{faja_amarillo_verde}
-	%	\include{faja_verde}
-	%	\include{faja_verde_azul}
-	%	\include{faja_azul}
+	\include{capitulos/introduccion}
+	\include{capitulos/historia}
+	\include{capitulos/vocabulario}
+	\include{capitulos/entrenamiento}
+
+	\include{capitulos/tecnicas_puno}
+	\include{capitulos/tecnica_patadas}
+	\include{capitulos/tecnicas_de_Wong-Gwang_Popsa}
+	\include{capitulos/lucha_piso}
+%	\include{faja_celeste_amarillo}
+%	\include{faja_amarilla}
+%	\include{faja_amarilla_verde}
+%	\include{faja_verde}
+%	\include{faja_verde_azul}
+%	\include{faja_azul}
+
+%	\include{bibliografia}
+
+	% Sección del glosario
+
+	\include{glosario}
+	\chapter{Glosario}
+	\addcontentsline{toc}{chapter}{Glosario} % Agregar la sección al índice
+	\printglossaries
+
+	\appendix
+
+	\clearpage
+
+	\printglossary
+
+	\clearpage
+
+	\appendix
+
+	\include{apendice/hangul}
 
 
 \end{document}
